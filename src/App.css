@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+button {
+	background: #d93f0c;
+	border: 0;
+	border-radius: 6px;
+	box-shadow: none;
+	color: #fff;
+	cursor: pointer;
+	font: 700 1.125rem/1.08 myriad-pro, sans-serif;
+	outline: 0;	
+	padding: 1.1rem 2.5rem;
+	text-align: center;
+	text-decoration: none;
+	white-space: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button:focus,
+button:hover {
+	background: #ae3209;
+	border: 0;
+	color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type="file"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+    cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button:focus,
+input:focus {
+    outline: none;
 }
 
-.App-link {
-  color: #61dafb;
+.copy-size-large{
+    font-size: 1.25rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.copy-size-medium{
+    font-size: 1.06rem;
 }
+
+.copy-size-small{
+    font-size: 1rem;
+}
+
+.text-error-vs {
+	color: #981b1e;
+}
+
+#doc {
+    display: block;
+    margin: 1.25rem 0;
+}
+

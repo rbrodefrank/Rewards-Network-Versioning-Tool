@@ -1,68 +1,71 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Rewards Network Versioning Tool: Developer Guide
+Created By: Ryan BrodeFrank
 
-## Available Scripts
+A short guide on developing, deploying, and using the React Versioning Tool.
 
-In the project directory, you can run:
+## Developing
+### Initializing
+In order to edit the Versioning Tool download the all folders/files except the 'build' and 'node_modules' folders. Open a terminal and open the folder containing the root files (where package.json is located). Run 'npm install' command to download all node modules. It is now possible to run and edit the Versioning Tool on your local machine.
 
-### `npm start`
+### Testing
+After following everything in the [Initializing section](#initializing), run 'npm start' in your terminal inside the downloaded Versioning Tool folder to initialize a local version on http://localhost:3000/. Saving any changes once 'npm start' is running will reload the local version with changes.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Deployment
+### Building
+Run 'npm run build' in your terminal. After it has finished, open the SFTP client and connect to the backend of the WordPress site. In the root folder is a 'react' folder, copy this onto your local machine as a backup, then delete it from the WordPress database. Find the edited local version of the tool and transfer the 'build' folder into root of the WordPress backend with the SFTP. This folder should also include the folders 'wp-content' and 'wp-includes'. Change the 'build' folder's name to 'react' and delete the 'index.html' file.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+In the WordPress site, go to the page editor where the tool has been embeded. Change the script tag with src="/react/static/js/main.{hash-code}.js" and change the {hash-code} number to the updated file hash number (in 'build/static/js/main.{hash-code}.js) from your local project.
 
-### `npm test`
+## Using the Versioning Tool
+### Formating the Document
+The Versioning Tool only works with a preformated document that follows certain guidelines. Any file that does not align with those guidelines will fail to version properly.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Variables
+A variable is any value that could change depending on which Partner is being versioned. 
 
-### `npm run build`
+Variables must be inside curly brackets {} and match one of the listed variables below. Capitalization and spaces inside the {} will not affect the program, so {Bonus Currency} and {bonuscurrency} are both valid. However if a variable is spelled incorrectly or has added or removed characters it will return as an UNDEFINED VARIABLE.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##### Variable List
+* Name
+    * Loyalty Program Name
+* Partner
+    * Partner's 2 Letter Identifier
+* Program
+    * Dining Program Name
+* Currency
+    * Partner's Currency Name
+* X Number of Currency
+    * Ammount of Partner Currency a Member Can Receive
+* Bonus Currency
+    * Partner's Bonus Currency
+* Parent Brand Incentive
+    * Discription of How Partner's Currency Can Be Used
+* Full Sentence
+    * Variable to Add Period "." at the End of Full Sentences in for Partner's That Require it.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+#### Sections
+Sections are different areas of the document that have differing formatting for each Partner. Each section can have different casing and punctation rules based on the Partner. Below is a list of the different sections with how to designate them in quotes. For sections the Versioning Tool will ignore capitalization but NOT spacing.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##### Section List
+* Subject Line
+    * "subject line (50 characters)"
+* Title Tag
+    * "title tag (50 characters)"
+* Headline
+    * "headline:"
+* Body
+    * "body:"
 
-### `npm run eject`
+### Casing
+The Versioning Tool assumes that each document is writen in **Sentence Case with** only the first word of a sentence and proper nouns being capitalized. If a partner requires a different casing type then the tool will transfrom the Sentence Casing to the proper format. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Using the Tool
+The Versioning Tool is hosted at [Rewards Network Versioning Tool](https://rewardsnetwork.staging.wpengine.com/versioning-tool/). Once there click "Choose File" and select the Word document you want to version (must be of file type '.docx'). Click the checkbox next to any partners to toggle that partner on/off. Finally, once all partners have been selected/deselected click the "Generate Document" button. A new file will soon appear in your browser (depending on the browser you are using it will appear in different places, but most likely it will appear at the bottom of your browser). Click the file to download it.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Reference Resources
+https://medium.com/@CodeCareerCoach/react-app-inside-a-wordpress-page-or-post-4c7d38181b3d
+https://zeph.co/disable-code-splitting-create-react-app
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+# Version Information
+## 1.0
+Versioning Tool functionality finished and posted to RN.com
