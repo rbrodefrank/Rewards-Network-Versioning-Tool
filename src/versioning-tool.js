@@ -549,7 +549,7 @@ class VersioningTool extends Component {
                     thisReact.createPartnerXML(body, thisReact.activePartner);
 
                     // Add Partner to baseBody
-                    //Create page break
+                    // Create page break
                     let breakP = xmlObject.createElement("w:p");
                     let breakR = xmlObject.createElement("w:r");
                     let breakBr = xmlObject.createElement("w:br");
@@ -653,8 +653,9 @@ class VersioningTool extends Component {
                 word = "parentBrandIncentive";
                 break;
             case "fullsentence":
-                if (section === "subject" && this.state.activePartner.punctuation.SL === "fullSentence") return ".";
-                else if (section === "headline" && this.state.activePartner.punctuation.HL === "fullSentence") return ".";
+                if ((section === "subject" && this.state.activePartner.punctuation.SL === "fullSentence") 
+                || (section === "headline" && this.state.activePartner.punctuation.HL === "fullSentence")) 
+                    return ".";
                 else return "";
             default:
                 return "(UNDEFINED VARIABLE)";
@@ -747,7 +748,7 @@ class VersioningTool extends Component {
         if (last) {
             str = str.trim();
             let lastLetter = str[str.length - 1];
-            let punctuationArr = ['.', '?', '!'];
+            let punctuationArr = ['.', '?', '!', '\u2026'];
             if (punctuationArr.includes(lastLetter)) return str;
             return str + ".";
         }

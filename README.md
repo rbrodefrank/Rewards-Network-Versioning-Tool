@@ -17,8 +17,8 @@ Run 'npm run build' in your terminal. After it has finished, open the SFTP clien
 In the WordPress site, go to the page editor where the tool has been embeded. Change the script tag with src="/react/static/js/main.{hash-code}.js" and change the {hash-code} number to the updated file hash number (in 'build/static/js/main.{hash-code}.js) from your local project.
 
 ## Using the Versioning Tool
-### Formating the Document
-The Versioning Tool only works with a preformated document that follows certain guidelines. Any file that does not align with those guidelines will fail to version properly.
+### Formatting the Document
+The Versioning Tool only works with a preformatted document that follows certain guidelines. Any file that does not align with those guidelines will fail to version properly.
 
 #### Variables
 A variable is any value that could change depending on which Partner is being versioned. 
@@ -35,11 +35,11 @@ Variables must be inside curly brackets {} and match one of the listed variables
 * Currency
     * Partner's Currency Name
 * X Number of Currency
-    * Ammount of Partner Currency a Member Can Receive
+    * Amount of Partner Currency a Member Can Receive
 * Bonus Currency
     * Partner's Bonus Currency
 * Parent Brand Incentive
-    * Discription of How Partner's Currency Can Be Used
+    * Description of How Partner's Currency Can Be Used
 * Full Sentence
     * Variable to Add Period "." at the End of Full Sentences in for Partner's That Require it.
 
@@ -57,7 +57,7 @@ Sections are different areas of the document that have differing formatting for 
     * "body:"
 
 ### Casing
-The Versioning Tool assumes that each document is writen in **Sentence Case with** only the first word of a sentence and proper nouns being capitalized. If a partner requires a different casing type then the tool will transfrom the Sentence Casing to the proper format. 
+The Versioning Tool assumes that each document is written in **Sentence Case** with only the first word of a sentence and proper nouns being capitalized. If a partner requires a different casing type then the tool will transform the Sentence Casing to the proper format. 
 
 ### Using the Tool
 The Versioning Tool is hosted at [Rewards Network Versioning Tool](https://rewardsnetwork.staging.wpengine.com/versioning-tool/). Once there click "Choose File" and select the Word document you want to version (must be of file type '.docx'). Click the checkbox next to any partners to toggle that partner on/off. Finally, once all partners have been selected/deselected click the "Generate Document" button. A new file will soon appear in your browser (depending on the browser you are using it will appear in different places, but most likely it will appear at the bottom of your browser). Click the file to download it.
