@@ -67,5 +67,10 @@ https://medium.com/@CodeCareerCoach/react-app-inside-a-wordpress-page-or-post-4c
 https://zeph.co/disable-code-splitting-create-react-app
 
 # Version Information
+## 1.0.1
+Added Marriott Bonvoy
+Global Mentions changed to still have the 1st mention but all trademarks are removed
+Body sections can now also be identified by 'Body Copy:'
+
 ## 1.0
 Versioning Tool functionality finished and posted to RN.com
