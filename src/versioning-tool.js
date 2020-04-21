@@ -505,7 +505,7 @@ class VersioningTool extends Component {
                 bonusCurrency: false,
             },
             activePartner: {},
-            selectedPartners: ["AA", "AK", "CR", "DL", "ES", "FR", "FS", "HH", "ID", "IHG", "OR", "SW", "TB", "UA", "UP"],
+            selectedPartners: ["AA", "AK", "CR", "DL", "ES", "FR", "FS", "HH", "ID", "IHG", "MB", "OR", "SW", "TB", "UA", "UP"],
         }
     }
 
