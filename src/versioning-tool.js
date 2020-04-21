@@ -316,6 +316,36 @@ class VersioningTool extends Component {
                     globalMentions: false,
                 },
                 {
+                    name: "Marriott Bonvoy",
+                    partner: "MB",
+                    program: "Eat Around Town",
+                    currency: "points",
+                    xNumCurrency: "[4/6] points per dollar spent",
+                    bonusCurrency: "bonus points",
+                    parentBrandIncentive: "",
+                    firstMention: {
+                        program: "Eat Around Town by Marriott Bonvoy\u2122",
+                        currency: "Marriott Bonvoy\u2122 points",
+                        xNumCurrency: "[4/6] Marriott Bonvoy\u2122 points per dollar spent",
+                        bonusCurrency: "Marriott Bonvoy\u2122 bonus points",
+                    },
+                    SLTT: {
+                        program: "Eat Around Town by Marriott Bonvoy",
+                        currency: "Marriott Bonvoy points",
+                        bonusCurrency: "bonus points",
+                    },
+                    casing: {
+                        SL: "Title",
+                        HL: "All Caps",
+                        CTA: "All Caps",
+                    },
+                    punctuation: {
+                        SL: "",
+                        HL: "",
+                    },
+                    globalMentions: true,
+                },
+                {
                     name: "Orbitz Rewards\u00AE",
                     partner: "OR",
                     program: "Orbitz Rewards Dining",
@@ -468,6 +498,7 @@ class VersioningTool extends Component {
                 }
             ],
             mentions: {
+                global: false,
                 program: false,
                 currency: false,
                 xNumCurrency: false,
@@ -665,14 +696,17 @@ class VersioningTool extends Component {
         let returnVal;
         if (section === "subject" || section === "title") {
             returnVal = this.state.activePartner.SLTT[word] ? this.state.activePartner.SLTT[word] : this.state.activePartner[word];
-        } else if (section === "headline" || section === "body") {
+        } else if (section === "headline" || section === "body" || section === "CTA") {
             if (this.state.mentions[word]) {
                 returnVal = this.state.activePartner[word];
             } else {
                 // Set return value to first mention or if first mention variable doesn't exist set to second mention
                 returnVal = this.state.activePartner.firstMention[word] ? this.state.activePartner.firstMention[word] : this.state.activePartner[word];
                 if (!this.state.activePartner.globalMentions) this.state.mentions[word] = true;
-                else for (let key in this.state.mentions) this.state.mentions[key] = true;
+                else {
+                    if (this.state.mentions.global === true) returnVal = this.removeTrademarkSymbols(returnVal);
+                    this.state.mentions.global = true;
+                }
             }
         } else {
             returnVal = this.state.activePartner[word];
@@ -723,6 +757,12 @@ class VersioningTool extends Component {
 
     sentenceCase = (str) => {
         return str.replace(str[0], str[0].toUpperCase());
+    }
+
+    removeTrademarkSymbols = (str) => {
+        let newStr = str.replace(/[\u00AE\u2122\u2120]/g, "");
+        console.log("removeTMSymbols", str, newStr);
+        return newStr
     }
 
     editPunctuation = (str, section, last) => {
@@ -776,7 +816,8 @@ class VersioningTool extends Component {
             if (text.includes("subject line (50 characters)")) return "subject";
             else if (text.includes("title tag (50 characters)")) return "title";
             else if (text.includes("headline:")) return "headline";
-            else if (text.includes("body:")) return "body";
+            else if (text.includes("body:") || text.includes("body copy:")) return "body";
+            else if (text.includes("cta:")) return "cta";
         }
         return false;
     }
@@ -910,7 +951,7 @@ class VersioningTool extends Component {
                             <span id="checkboxAllText">Unselect all partners</span>
                         </div>
                     </div>
-                    <input type="file" id="doc" />
+                    <input type="file" id="doc" accept=".docx, application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
                     <button onClick={this.generate}>Generate Document</button>
                     <p className="text-error-vs copy-size-large"></p>
                 </form>
