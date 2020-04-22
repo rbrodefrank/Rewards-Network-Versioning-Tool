@@ -36,6 +36,7 @@ class VersioningTool extends Component {
                     casing: {
                         SL: "Sentence",
                         HL: "Sentence",
+                        CTA: "All Caps",
                     },
                     punctuation: {
                         SL: "fullSentence",
@@ -193,7 +194,7 @@ class VersioningTool extends Component {
                         SL: "",
                         HL: "Always",
                     },
-                    globalMentions: false,
+                    globalMentions: true,
                 },
                 {
                     name: "Free Spirit\u2122",
@@ -300,7 +301,7 @@ class VersioningTool extends Component {
                         bonusCurrency: "IHG\u00AE Rewards Club bonus points",
                     },
                     SLTT: {
-                        program: "IHG\u00AE Rewards Club Dining",
+                        program: "IHG Rewards Club Dining",
                         currency: "points",
                         bonusCurrency: "bonus points",
                     },
@@ -367,7 +368,7 @@ class VersioningTool extends Component {
                     casing: {
                         SL: "Title",
                         HL: "Title",
-                        CTA: "All Caps",
+                        CTA: "Sentence",
                     },
                     punctuation: {
                         SL: "",
@@ -510,9 +511,11 @@ class VersioningTool extends Component {
     }
 
     generate = (event) => {
+        event.preventDefault();
+
         // Clear error text
         document.getElementsByClassName("text-error-vs")[0].innerHTML = "";
-
+        
         // Get all selected partners
         let partnerInput = document.getElementsByTagName('input')
         let selectedPartners = [];
@@ -522,7 +525,6 @@ class VersioningTool extends Component {
         }
         this.setState({ selectedPartners: selectedPartners });
 
-        event.preventDefault();
         var docs = document.getElementById('doc');
         var parser = new DOMParser();
         var reader = new FileReader();
