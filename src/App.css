@@ -22,7 +22,7 @@ button:hover {
 
 input[type="file"],
 input[type="checkbox"] {
-    width: auto;
+    height: auto;
     margin-right: 0.5rem;
     cursor: pointer;
 }

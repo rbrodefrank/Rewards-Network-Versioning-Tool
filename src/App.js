@@ -6,7 +6,7 @@ import './App.css';
 
 function App() {
   return (
-    <main className="container my-5">
+    <main className="container mb-5">
       <h1 className="mx-auto">Versioning Tool</h1>
       <Router>
         <Route path="/versioning-tool/" component={VersioningTool} />
