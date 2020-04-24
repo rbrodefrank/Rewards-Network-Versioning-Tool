@@ -815,9 +815,9 @@ class VersioningTool extends Component {
     determineSection = (textRuns) => {
         for (let j = 0; j < textRuns.length; j++) {
             var text = textRuns[j].childNodes[0].nodeValue.toLowerCase();
-            if (text.includes("subject line (50 characters)")) return "subject";
-            else if (text.includes("title tag (50 characters)")) return "title";
-            else if (text.includes("headline:")) return "headline";
+            if (text.includes("subject line (50 characters)") || text.includes("subject line (50 characters)")) return "subject";
+            else if (text.includes("title tag (50 characters)") || text.includes("title tag:")) return "title";
+            else if (text.includes("headline:" || text.includes("headline copy:"))) return "headline";
             else if (text.includes("body:") || text.includes("body copy:")) return "body";
             else if (text.includes("cta:")) return "cta";
         }
