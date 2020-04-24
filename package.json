@@ -1,6 +1,6 @@
 {
   "name": "versioning-tool",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "private": true,
   "homepage": "https://rewardsnetwork.staging.wpengine.com/react/",
   "dependencies": {
@@ -8,11 +8,9 @@
     "@testing-library/react": "^9.4.1",
     "@testing-library/user-event": "^7.2.1",
     "@types/office-js": "^1.0.80",
-    "bootstrap": "^4.4.1",
     "file-saver": "^2.0.2",
     "pizzip": "^3.0.6",
     "react": "^16.13.0",
-    "react-bootstrap": "^1.0.0-beta.17",
     "react-dom": "^16.13.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",

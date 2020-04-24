@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PizZip from 'pizzip';
 import file from 'file-saver';
-import "./versioning-tool.css";
 
 class VersioningTool extends Component {
     constructor(props) {
@@ -514,7 +513,7 @@ class VersioningTool extends Component {
         event.preventDefault();
 
         // Clear error text
-        document.getElementsByClassName("text-error-vs")[0].innerHTML = "";
+        document.getElementsByClassName("text-error")[0].innerHTML = "";
         
         // Get all selected partners
         let partnerInput = document.getElementsByTagName('input')
@@ -529,26 +528,40 @@ class VersioningTool extends Component {
         var parser = new DOMParser();
         var reader = new FileReader();
 
+        var docName = docs.files[0].name;
+
         if (!docs.files || docs.files.length === 0) {
             //No File Choosen
-            document.getElementsByClassName("text-error-vs")[0].innerHTML = "No files selected";
-        }
-
-        else {
+            document.getElementsByClassName("text-error")[0].innerHTML = "No files selected";
+        } else if (!docName.includes('.docx')) {
+            document.getElementsByClassName("text-error")[0].innerHTML = "Document is not of .docx type";
+        } else {
             var doc = docs.files[0];
             var fileName = doc.name.slice(0, -5) + " Versioned";
             reader.readAsBinaryString(doc);
             reader.onerror = function (event) {
-                document.getElementsByClassName("text-error-vs")[0].innerHTML = "error reading file" + event;
+                document.getElementsByClassName("text-error")[0].innerHTML = "error reading file" + event;
             }
 
             const thisReact = this;
             reader.onload = function (event) {
                 // Extract XML file from docx
                 const content = event.target.result;
-                var zip = new PizZip(content);
+                var zip;
+                var xmlString;
+                try {
+                    zip = new PizZip(content);
+                } catch (err) {
+                    document.getElementsByClassName("text-error")[0].innerHTML = "Error: Not acceptable file!";
+                    return;
+                }
                 var utf8decoder = new TextDecoder();
-                var xmlString = utf8decoder.decode(zip.files["word/document.xml"]._data.getContent());
+                try {
+                    xmlString = utf8decoder.decode(zip.files["word/document.xml"]._data.getContent());
+                } catch (err) {
+                    document.getElementsByClassName("text-error")[0].innerHTML = "Error: Corrupted or incorrect file!";
+                    return;
+                }
                 var xmlObject = parser.parseFromString(xmlString, "text/xml");
                 var baseBody = xmlObject.getElementsByTagName("w:body")[0];
 
@@ -955,7 +968,7 @@ class VersioningTool extends Component {
                     </div>
                     <input type="file" id="doc" accept=".docx, application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
                     <button onClick={this.generate}>Generate Document</button>
-                    <p className="text-error-vs copy-size-large"></p>
+                    <p className="text-error copy-size-large"></p>
                 </form>
             </div>
         );

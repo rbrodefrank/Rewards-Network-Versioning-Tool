@@ -67,6 +67,11 @@ https://medium.com/@CodeCareerCoach/react-app-inside-a-wordpress-page-or-post-4c
 https://zeph.co/disable-code-splitting-create-react-app
 
 # Version Information
+## 1.0.2
+* CSS updates
+* Error catching code implemented
+* Doc type limited to .docx files
+
 ## 1.0.1
 * Added Marriott Bonvoy
 * Global Mentions changed to still have the 1st mention but all trademarks are removed
