@@ -69,6 +69,7 @@ https://zeph.co/disable-code-splitting-create-react-app
 # Version Information
 ## 1.0.2
 * CSS updates
+* Bootstrap removed
 * Error catching code implemented
 * Doc type limited to .docx files
 

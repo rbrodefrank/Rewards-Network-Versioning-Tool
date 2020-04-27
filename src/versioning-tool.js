@@ -44,7 +44,7 @@ class VersioningTool extends Component {
                     globalMentions: false,
                 },
                 {
-                    name: "Mileage Plan",
+                    name: "Mileage Plan\u2122",
                     partner: "AK",
                     program: "Mileage Plan Dining",
                     currency: "miles",
@@ -55,7 +55,7 @@ class VersioningTool extends Component {
                         program: "Mileage Plan\u2122 Dining",
                         currency: "Mileage Plan\u2122 miles",
                         xNumCurrency: "[3/5] Mileage Plan\u2122 miles per $1 spent",
-                        bonusCurrency: "bonus miles",
+                        bonusCurrency: "Mileage Plan\u2122 bonus miles",
                     },
                     SLTT: {
                         program: "Mileage Plan Dining",
@@ -524,6 +524,11 @@ class VersioningTool extends Component {
         }
         this.setState({ selectedPartners: selectedPartners });
 
+        if(this.state.selectedPartners.length < 1) {
+            document.getElementsByClassName("text-error")[0].innerHTML = "No partners selected";
+            return;
+        }
+
         var docs = document.getElementById('doc');
         var parser = new DOMParser();
         var reader = new FileReader();
@@ -720,7 +725,8 @@ class VersioningTool extends Component {
                 if (!this.state.activePartner.globalMentions) this.state.mentions[word] = true;
                 else {
                     if (this.state.mentions.global === true) returnVal = this.removeTrademarkSymbols(returnVal);
-                    this.state.mentions.global = true;
+                    if (typeof this.state.mentions[word] !== "undefined") this.state.mentions.global = true;
+                    this.state.mentions[word] = true;
                 }
             }
         } else {
@@ -776,7 +782,6 @@ class VersioningTool extends Component {
 
     removeTrademarkSymbols = (str) => {
         let newStr = str.replace(/[\u00AE\u2122\u2120]/g, "");
-        console.log("removeTMSymbols", str, newStr);
         return newStr
     }
 
@@ -828,7 +833,7 @@ class VersioningTool extends Component {
     determineSection = (textRuns) => {
         for (let j = 0; j < textRuns.length; j++) {
             var text = textRuns[j].childNodes[0].nodeValue.toLowerCase();
-            if (text.includes("subject line (50 characters)") || text.includes("subject line (50 characters)")) return "subject";
+            if (text.includes("subject line (50 characters)") || text.includes("subject line:")) return "subject";
             else if (text.includes("title tag (50 characters)") || text.includes("title tag:")) return "title";
             else if (text.includes("headline:" || text.includes("headline copy:"))) return "headline";
             else if (text.includes("body:") || text.includes("body copy:")) return "body";
