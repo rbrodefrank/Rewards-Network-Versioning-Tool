@@ -60,7 +60,7 @@ Sections are different areas of the document that have differing formatting for 
 The Versioning Tool assumes that each document is written in **Sentence Case** with only the first word of a sentence and proper nouns being capitalized. If a partner requires a different casing type then the tool will transform the Sentence Casing to the proper format. 
 
 ### Using the Tool
-The Versioning Tool is hosted at [Rewards Network Versioning Tool](https://rewardsnetwork.staging.wpengine.com/versioning-tool/). Once there click "Choose File" and select the Word document you want to version (must be of file type '.docx'). Click the checkbox next to any partners to toggle that partner on/off. Finally, once all partners have been selected/deselected click the "Generate Document" button. A new file will soon appear in your browser (depending on the browser you are using it will appear in different places, but most likely it will appear at the bottom of your browser). Click the file to download it.
+The Versioning Tool is hosted at [Rewards Network Versioning Tool](https://rnstg.wpengine.com/versioning-tool/). Once there click "Choose File" and select the Word document you want to version (must be of file type '.docx'). Click the checkbox next to any partners to toggle that partner on/off. Finally, once all partners have been selected/deselected click the "Generate Document" button. A new file will soon appear in your browser (depending on the browser you are using it will appear in different places, but most likely it will appear at the bottom of your browser). Click the file to download it.
 
 ## Reference Resources
 https://medium.com/@CodeCareerCoach/react-app-inside-a-wordpress-page-or-post-4c7d38181b3d
@@ -72,6 +72,7 @@ https://zeph.co/disable-code-splitting-create-react-app
 * Bootstrap removed
 * Error catching code implemented
 * Doc type limited to .docx files
+* Fixed global mentions bug
 
 ## 1.0.1
 * Added Marriott Bonvoy
