@@ -18,13 +18,12 @@ class VersioningTool extends Component {
                     partner: "AA",
                     program: "AAdvantage Dining\u2120",
                     currency: "AAdvantage\u00AE miles",
-                    xNumCurrency: "[3/5] AAdvantage\u00AE miles per $1 spent.",
+                    xNumCurrency: "[3/5] {currency} per $1 spent.", // AAdvantage\u00AE miles
                     bonusCurrency: "AAdvantage\u00AE bonus miles",
                     parentBrandIncentive: "for travel on American Airlines",
                     firstMention: {
                         program: "AAdvantage Dining\u2120",
                         currency: "American Airlines AAdvantage\u00AE miles",
-                        xNumCurrency: "[3/5] American Airlines AAdvantage\u00AE miles per $1 spent.",
                         bonusCurrency: "American Airlines AAdvantage\u00AE bonus miles",
                     },
                     SLTT: {
@@ -48,13 +47,12 @@ class VersioningTool extends Component {
                     partner: "AK",
                     program: "Mileage Plan Dining",
                     currency: "miles",
-                    xNumCurrency: "[3/5] Mileage Plan miles per $1 spent",
+                    xNumCurrency: "[3/5] {currency} per $1 spent",
                     bonusCurrency: "bonus miles",
                     parentBrandIncentive: "for travel on Alaska Airlines and Alaska Global Partners",
                     firstMention: {
                         program: "Mileage Plan\u2122 Dining",
                         currency: "Mileage Plan\u2122 miles",
-                        xNumCurrency: "[3/5] Mileage Plan\u2122 miles per $1 spent",
                         bonusCurrency: "Mileage Plan\u2122 bonus miles",
                     },
                     SLTT: {
@@ -80,13 +78,12 @@ class VersioningTool extends Component {
                     partner: "CR",
                     program: "Caesars Rewards Dining",
                     currency: "Reward Credits",
-                    xNumCurrency: "Reward Credits",
+                    xNumCurrency: "{currency}",
                     bonusCurrency: "currency",
                     parentBrandIncentive: "for use at Caesars Entertainment\u00AE locations",
                     firstMention: {
                         program: "Caesars Rewards Dining",
                         currency: "Reward Credits\u00AE",
-                        xNumCurrency: "Reward Credits\u00AE",
                         bonusCurrency: "currency",
                     },
                     SLTT: {
@@ -110,13 +107,12 @@ class VersioningTool extends Component {
                     partner: "DL",
                     program: "SkyMiles Dining",
                     currency: "miles",
-                    xNumCurrency: "[3/5] per $1 spent",
+                    xNumCurrency: "[3/5] {currency} per $1 spent",
                     bonusCurrency: "bonus miles",
                     parentBrandIncentive: "for travel on Delta Air Lines",
                     firstMention: {
                         program: "SkyMiles\u00AE Dining",
                         currency: "miles",
-                        xNumCurrency: "[3/5] miles per $1 spent",
                         bonusCurrency: "bonus miles",
                     },
                     SLTT: {
@@ -146,7 +142,6 @@ class VersioningTool extends Component {
                     firstMention: {
                         program: "eScrip Dining",
                         currency: "contributions",
-                        xNumCurrency: "2.5% in contributions for every dollar spent",
                         bonusCurrency: "currency",
                     },
                     SLTT: {
@@ -170,13 +165,12 @@ class VersioningTool extends Component {
                     partner: "FR",
                     program: "Fuel Rewards Dining",
                     currency: "fuel savings",
-                    xNumCurrency: "10¢/gal in fuel savings for every $50 spent",
+                    xNumCurrency: "10¢/gal in {currency} for every $50 spent",
                     bonusCurrency: "currency",
                     parentBrandIncentive: "",
                     firstMention: {
                         program: "Fuel Rewards\u00AE Dining",
                         currency: "Fuel Rewards\u00AE savings",
-                        xNumCurrency: "10¢/gal in Fuel Rewards® savings for every $50 spent",
                         bonusCurrency: "currency",
                     },
                     SLTT: {
@@ -200,13 +194,12 @@ class VersioningTool extends Component {
                     partner: "FS",
                     program: "FREE SPIRIT Dining",
                     currency: "miles",
-                    xNumCurrency: "[3/5] miles per $1 spent",
+                    xNumCurrency: "[3/5] {currency} per $1 spent",
                     bonusCurrency: "bonus miles",
                     parentBrandIncentive: "for travel on Spirit Airlines",
                     firstMention: {
                         program: "FREE SPIRIT\u00AE Dining",
                         currency: "FREE SPIRIT\u00AE miles",
-                        xNumCurrency: "[3/5] FREE SPIRIT\u00AE miles per $1 spent",
                         bonusCurrency: "FREE SPIRIT\u00AE bonus miles",
                     },
                     SLTT: {
@@ -229,15 +222,14 @@ class VersioningTool extends Component {
                     name: "Hilton Honors",
                     partner: "HH",
                     program: "Hilton Honors Dining",
-                    currency: "2M Bonus Points",
-                    xNumCurrency: "[5/8] Bonus Points per $1 spent",
-                    bonusCurrency: "2M Bonus Points",
+                    currency: "Bonus Points",
+                    xNumCurrency: "[5/8] {currency} per $1 spent",
+                    bonusCurrency: "Bonus Points",
                     parentBrandIncentive: "for use at Hilton\u00AE hotels worldwide",
                     firstMention: {
                         program: "Hilton Honors Dining",
                         currency: "Hilton Honors Bonus Points",
-                        xNumCurrency: "[5/8] Hilton Honors Bonus Points per $1 spent",
-                        bonusCurrency: "1M Hilton Honors Bonus Points",
+                        bonusCurrency: "Hilton Honors Bonus Points",
                     },
                     SLTT: {
                         program: "Hilton Honors Dining",
@@ -266,7 +258,6 @@ class VersioningTool extends Component {
                     firstMention: {
                         program: "iDine\u00AE",
                         currency: "benefits",
-                        xNumCurrency: "benefits",
                         bonusCurrency: "bonus benefits",
                     },
                     SLTT: {
@@ -290,13 +281,12 @@ class VersioningTool extends Component {
                     partner: "IHG",
                     program: "IHG\u00AE Rewards Club Dining",
                     currency: "points",
-                    xNumCurrency: "[5/8] points per $1 spent",
+                    xNumCurrency: "[5/8] {currency} per $1 spent",
                     bonusCurrency: "bonus points",
                     parentBrandIncentive: "for use at the IHG\u00AE family of hotels worldwide",
                     firstMention: {
                         program: "IHG\u00AE Rewards Club Dining",
                         currency: "IHG\u00AE Rewards Club points",
-                        xNumCurrency: "[5/8] IHG\u00AE Rewards Club points per $1 spent",
                         bonusCurrency: "IHG\u00AE Rewards Club bonus points",
                     },
                     SLTT: {
@@ -320,13 +310,12 @@ class VersioningTool extends Component {
                     partner: "MB",
                     program: "Eat Around Town",
                     currency: "points",
-                    xNumCurrency: "[4/6] points per dollar spent",
+                    xNumCurrency: "[4/6] {currency} per dollar spent",
                     bonusCurrency: "bonus points",
                     parentBrandIncentive: "",
                     firstMention: {
                         program: "Eat Around Town by Marriott Bonvoy\u2122",
                         currency: "Marriott Bonvoy\u2122 points",
-                        xNumCurrency: "[4/6] Marriott Bonvoy\u2122 points per dollar spent",
                         bonusCurrency: "Marriott Bonvoy\u2122 bonus points",
                     },
                     SLTT: {
@@ -350,13 +339,12 @@ class VersioningTool extends Component {
                     partner: "OR",
                     program: "Orbitz Rewards Dining",
                     currency: "Orbucks\u00AE",
-                    xNumCurrency: "5% in Orbucks\u00AE for every dollar spent",
+                    xNumCurrency: "5% in {currency} for every dollar spent",
                     bonusCurrency: "bonus Orbucks",
                     parentBrandIncentive: "to use toward your next trip with Orbitz",
                     firstMention: {
                         program: "Orbitz Rewards\u00AE Dining",
                         currency: "Orbucks\u00AE",
-                        xNumCurrency: "5% in Orbucks\u00AE for every dollar spent",
                         bonusCurrency: "bonus Orbucks\u00AE",
                     },
                     SLTT: {
@@ -380,13 +368,12 @@ class VersioningTool extends Component {
                     partner: "SW",
                     program: "Rapid Rewards Dining",
                     currency: "points",
-                    xNumCurrency: " three points per dollar spent",
+                    xNumCurrency: " three {currency} per dollar spent",
                     bonusCurrency: "bonus points",
                     parentBrandIncentive: "that can be used towards your next flight",
                     firstMention: {
                         program: "Rapid Rewards Dining\u00AE",
                         currency: "Rapid Rewards\u00AE points",
-                        xNumCurrency: " three Rapid Rewards\u00AE points per dollar spent",
                         bonusCurrency: "Rapid Rewards\u00AE bonus points",
                     },
                     SLTT: {
@@ -410,13 +397,12 @@ class VersioningTool extends Component {
                     partner: "TB",
                     program: "TrueBlue Dining",
                     currency: "points",
-                    xNumCurrency: "3 TrueBlue points for every dollar spent",
+                    xNumCurrency: "3 {currency} for every dollar spent",
                     bonusCurrency: "bonus points",
                     parentBrandIncentive: "for travel on JetBlue",
                     firstMention: {
                         program: "TrueBlue Dining",
                         currency: "TrueBlue points",
-                        xNumCurrency: "3 TrueBlue points for every dollar spent",
                         bonusCurrency: "TrueBlue bonus points",
                     },
                     SLTT: {
@@ -440,13 +426,12 @@ class VersioningTool extends Component {
                     partner: "UA",
                     program: "MileagePlus Dining",
                     currency: "miles",
-                    xNumCurrency: "[3/5] per $1 spent",
+                    xNumCurrency: "[3/5] {currency} per $1 spent",
                     bonusCurrency: "bonus miles",
                     parentBrandIncentive: "for travel on United\u00AE",
                     firstMention: {
                         program: "MileagePlus Dining\u2120",
                         currency: "miles",
-                        xNumCurrency: "[3/5] miles per $1 spent",
                         bonusCurrency: "bonus miles",
                     },
                     SLTT: {
@@ -477,7 +462,6 @@ class VersioningTool extends Component {
                     firstMention: {
                         program: "Upromise\u00AE Dining",
                         currency: "cash back for college",
-                        xNumCurrency: "[2.5%/5%] cash back for college per $1 spent",
                         bonusCurrency: "currency",
                     },
                     SLTT: {
@@ -501,7 +485,6 @@ class VersioningTool extends Component {
                 global: false,
                 program: false,
                 currency: false,
-                xNumCurrency: false,
                 bonusCurrency: false,
             },
             activePartner: {},
@@ -766,11 +749,11 @@ class VersioningTool extends Component {
     }
 
     titleCase = (str) => {
-        let connectorWords = ["and", "on", "or", "for", "a", "to", "of", "in", "at", "the", "into", "with", "than", "by"];
+        let connectorWords = ["and", "on", "or", "for", "a", "to", "of", "in", "at", "the", "into", "with", "by"];
         let name = this.state.activePartner.name;
         return str.split(' ').map(function (word) {
             if (connectorWords.includes(word)) return word;
-            if (word === name) return word;
+            if (word.includes(name)) return word;
             else if (word[0]) return word.replace(word[0], word[0].toUpperCase());
             return word;
         }).join(' ');

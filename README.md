@@ -41,7 +41,7 @@ Variables must be inside curly brackets {} and match one of the listed variables
 * Parent Brand Incentive
     * Description of How Partner's Currency Can Be Used
 * Full Sentence
-    * Variable to Add Period "." at the End of Full Sentences in for Partner's That Require it.
+    * Variable to Add a Period "." at the End of Full Sentences in for Partner's That Require it. Add the Varible After the Last Word in the Sentence as if it was a Period. This is an Example{full sentence}
 
 #### Sections
 Sections are different areas of the document that have differing formatting for each Partner. Each section can have different casing and punctation rules based on the Partner. Below is a list of the different sections with how to designate them in quotes. For sections the Versioning Tool will ignore capitalization but NOT spacing.
