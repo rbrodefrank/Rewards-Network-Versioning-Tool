@@ -18,7 +18,7 @@ class VersioningTool extends Component {
                     partner: "AA",
                     program: "AAdvantage Dining\u2120",
                     currency: "AAdvantage\u00AE miles",
-                    xNumCurrency: "[3/5] {currency} per $1 spent.", // AAdvantage\u00AE miles
+                    xNumCurrency: "[3/5] {currency} per $1 spent", // AAdvantage\u00AE miles
                     bonusCurrency: "AAdvantage\u00AE bonus miles",
                     parentBrandIncentive: "for travel on American Airlines",
                     firstMention: {
@@ -622,7 +622,7 @@ class VersioningTool extends Component {
             let newSection = this.determineSection(textRuns);
             if (newSection) {
                 section = newSection;
-                if (newSection === "subject") {
+                if (newSection === "subject" || newSection === "headline") {
                     for (let key in this.state.mentions) this.state.mentions[key] = false;
                 }
                 continue;
@@ -656,7 +656,7 @@ class VersioningTool extends Component {
                     // Edit punctuation
                     let lastRun = j + 1 === textRuns.length ? true : false;
                     txt = this.editPunctuation(txt, section, lastRun);
-
+                    
                     textRuns[j].childNodes[0].nodeValue = txt;
                 }
             }
@@ -687,10 +687,10 @@ class VersioningTool extends Component {
                 word = "parentBrandIncentive";
                 break;
             case "fullsentence":
-                if ((section === "subject" && this.state.activePartner.punctuation.SL === "fullSentence") 
-                || (section === "headline" && this.state.activePartner.punctuation.HL === "fullSentence")) 
+                if ((section === "subject" && this.state.activePartner.punctuation.SL === "fullSentence") || 
+                    (section === "headline" && this.state.activePartner.punctuation.HL === "fullSentence")) {
                     return ".";
-                else return "";
+                } else return "";
             default:
                 return "(UNDEFINED VARIABLE)";
         }
@@ -699,7 +699,7 @@ class VersioningTool extends Component {
         let returnVal;
         if (section === "subject" || section === "title") {
             returnVal = this.state.activePartner.SLTT[word] ? this.state.activePartner.SLTT[word] : this.state.activePartner[word];
-        } else if (section === "headline" || section === "body" || section === "CTA") {
+        } else if (section === "headline" || section === "body" || section === "cta") {
             if (this.state.mentions[word]) {
                 returnVal = this.state.activePartner[word];
             } else {
@@ -749,7 +749,7 @@ class VersioningTool extends Component {
     }
 
     titleCase = (str) => {
-        let connectorWords = ["and", "on", "or", "for", "a", "to", "of", "in", "at", "the", "into", "with", "by"];
+        let connectorWords = ["and", "on", "or", "for", "a", "an", "to", "of", "in", "at", "the", "into", "with", "by"];
         let name = this.state.activePartner.name;
         return str.split(' ').map(function (word) {
             if (connectorWords.includes(word)) return word;
@@ -760,7 +760,8 @@ class VersioningTool extends Component {
     }
 
     sentenceCase = (str) => {
-        return str.replace(str[0], str[0].toUpperCase());
+        if(str === undefined) return str.replace(str[0], str[0].toUpperCase());
+        return str;
     }
 
     removeTrademarkSymbols = (str) => {
