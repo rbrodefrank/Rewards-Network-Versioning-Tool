@@ -63,7 +63,7 @@ class VersioningTool extends Component {
                     casing: {
                         SL: "Sentence",
                         HL: "Sentence",
-                        CTA: "All Caps",
+                        CTA: "Sentence",
                     },
                     punctuation: {
                         SL: "fullSentence",
@@ -180,30 +180,30 @@ class VersioningTool extends Component {
                     },
                     casing: {
                         SL: "Sentence",
-                        HL: "Sentence",
-                        CTA: "Sentence",
+                        HL: "Title",
+                        CTA: "Title",
                     },
                     punctuation: {
                         SL: "",
-                        HL: "Always",
+                        HL: "",
                     },
                     globalMentions: true,
                 },
                 {
                     name: "Free Spirit\u2122",
                     partner: "FS",
-                    program: "FREE SPIRIT Dining",
+                    program: "Free Spirit\u00AE Dining",
                     currency: "miles",
                     xNumCurrency: "[3/5] {currency} per $1 spent",
                     bonusCurrency: "bonus miles",
                     parentBrandIncentive: "for travel on Spirit Airlines",
                     firstMention: {
-                        program: "FREE SPIRIT\u00AE Dining",
-                        currency: "FREE SPIRIT\u00AE miles",
-                        bonusCurrency: "FREE SPIRIT\u00AE bonus miles",
+                        program: "Free Spirit\u00AE Dining",
+                        currency: "Free Spirit\u00AE miles",
+                        bonusCurrency: "Free Spirit\u00AE bonus miles",
                     },
                     SLTT: {
-                        program: "FREE SPIRIT Dining",
+                        program: "Free Spirit Dining",
                         currency: "miles",
                         bonusCurrency: "bonus miles",
                     },
@@ -216,7 +216,7 @@ class VersioningTool extends Component {
                         SL: "",
                         HL: "",
                     },
-                    globalMentions: true,
+                    globalMentions: false,
                 },
                 {
                     name: "Hilton Honors",
@@ -297,7 +297,7 @@ class VersioningTool extends Component {
                     casing: {
                         SL: "Sentence",
                         HL: "Sentence",
-                        CTA: "Title",
+                        CTA: "Sentence",
                     },
                     punctuation: {
                         SL: "Never",
@@ -335,35 +335,6 @@ class VersioningTool extends Component {
                     globalMentions: true,
                 },
                 {
-                    name: "Orbitz Rewards\u00AE",
-                    partner: "OR",
-                    program: "Orbitz Rewards Dining",
-                    currency: "Orbucks\u00AE",
-                    xNumCurrency: "5% in {currency} for every dollar spent",
-                    bonusCurrency: "bonus Orbucks",
-                    parentBrandIncentive: "to use toward your next trip with Orbitz",
-                    firstMention: {
-                        program: "Orbitz Rewards\u00AE Dining",
-                        currency: "Orbucks\u00AE",
-                        bonusCurrency: "bonus Orbucks\u00AE",
-                    },
-                    SLTT: {
-                        program: "Orbitz Rewards Dining",
-                        currency: "Orbucks",
-                        bonusCurrency: "bonus Orbucks",
-                    },
-                    casing: {
-                        SL: "Title",
-                        HL: "Title",
-                        CTA: "Sentence",
-                    },
-                    punctuation: {
-                        SL: "",
-                        HL: "",
-                    },
-                    globalMentions: false,
-                },
-                {
                     name: "Rapid Rewards\u00AE",
                     partner: "SW",
                     program: "Rapid Rewards Dining",
@@ -390,7 +361,7 @@ class VersioningTool extends Component {
                         SL: "Always",
                         HL: "fullSentence",
                     },
-                    globalMentions: false,
+                    globalMentions: true,
                 },
                 {
                     name: "TrueBlue",
@@ -445,7 +416,7 @@ class VersioningTool extends Component {
                         CTA: "Sentence",
                     },
                     punctuation: {
-                        SL: "fullSentence",
+                        SL: "",
                         HL: "",
                         replaceExPoint: true,
                     },
@@ -488,7 +459,7 @@ class VersioningTool extends Component {
                 bonusCurrency: false,
             },
             activePartner: {},
-            selectedPartners: ["AA", "AK", "CR", "DL", "ES", "FR", "FS", "HH", "ID", "IHG", "MB", "OR", "SW", "TB", "UA", "UP"],
+            selectedPartners: ["AA", "AK", "CR", "DL", "ES", "FR", "FS", "HH", "ID", "IHG", "MB", "SW", "TB", "UA", "UP"],
         }
     }
 
