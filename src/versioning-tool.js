@@ -591,15 +591,18 @@ class VersioningTool extends Component {
         for (let i = 0; i < paragraphs.length; i++) {
             let textRuns = paragraphs[i].getElementsByTagName("w:t");
             let newSection = this.determineSection(textRuns);
+            let skipSectionTitle = false;
             if (newSection) {
                 section = newSection;
                 if (newSection === "subject" || newSection === "headline") {
                     for (let key in this.state.mentions) this.state.mentions[key] = false;
                 }
-                continue;
+                if (textRuns.length <= 1) continue;
+                else skipSectionTitle = true;
             }
 
             for (let j = 0; j < textRuns.length; j++) {
+                if (skipSectionTitle && j === 0) continue;
                 let txt = textRuns[j].childNodes[0].nodeValue;
                 if (txt.length > 0) {
                     // Text to lower case before program names added (program names should be capitalized)
@@ -788,7 +791,9 @@ class VersioningTool extends Component {
     determineSection = (textRuns) => {
         for (let j = 0; j < textRuns.length; j++) {
             var text = textRuns[j].childNodes[0].nodeValue.toLowerCase();
-            if (text.includes("subject line (50 characters)") || text.includes("subject line:")) return "subject";
+            if (text.includes("subject line (50 characters)") || text.includes("subject line:")) {
+                console.log(text);
+                return "subject";}
             else if (text.includes("title tag (50 characters)") || text.includes("title tag:")) return "title";
             else if (text.includes("headline:" || text.includes("headline copy:"))) return "headline";
             else if (text.includes("body:") || text.includes("body copy:")) return "body";
