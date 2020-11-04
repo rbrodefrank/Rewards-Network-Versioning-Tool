@@ -39,6 +39,7 @@ class VersioningTool extends Component {
                     punctuation: {
                         SL: "fullSentence",
                         HL: "",
+                        oxComma: true,
                     },
                     globalMentions: false,
                 },
@@ -99,6 +100,7 @@ class VersioningTool extends Component {
                     punctuation: {
                         SL: "",
                         HL: "",
+                        oxComma: true,
                     },
                     globalMentions: false,
                 },
@@ -128,35 +130,7 @@ class VersioningTool extends Component {
                     punctuation: {
                         SL: "",
                         HL: "",
-                    },
-                    globalMentions: false,
-                },
-                {
-                    name: "eScrip",
-                    partner: "ES",
-                    program: "eScrip Dining",
-                    currency: "contributions",
-                    xNumCurrency: "2.5% in contributions for every dollar spent",
-                    bonusCurrency: "currency",
-                    parentBrandIncentive: "for your favorite organization",
-                    firstMention: {
-                        program: "eScrip Dining",
-                        currency: "contributions",
-                        bonusCurrency: "currency",
-                    },
-                    SLTT: {
-                        program: "eScrip Dining",
-                        currency: "contributions",
-                        bonusCurrency: "currency",
-                    },
-                    casing: {
-                        SL: "Title",
-                        HL: "Title",
-                        CTA: "All Caps",
-                    },
-                    punctuation: {
-                        SL: "",
-                        HL: "",
+                        oxComma: true,
                     },
                     globalMentions: false,
                 },
@@ -186,6 +160,7 @@ class VersioningTool extends Component {
                     punctuation: {
                         SL: "",
                         HL: "",
+                        oxComma: true,
                     },
                     globalMentions: true,
                 },
@@ -215,6 +190,7 @@ class VersioningTool extends Component {
                     punctuation: {
                         SL: "",
                         HL: "",
+                        oxComma: true,
                     },
                     globalMentions: false,
                 },
@@ -244,6 +220,7 @@ class VersioningTool extends Component {
                     punctuation: {
                         SL: "",
                         HL: "",
+                        oxComma: true,
                     },
                     globalMentions: false,
                 },
@@ -273,6 +250,7 @@ class VersioningTool extends Component {
                     punctuation: {
                         SL: "",
                         HL: "",
+                        oxComma: true,
                     },
                     globalMentions: false,
                 },
@@ -300,8 +278,9 @@ class VersioningTool extends Component {
                         CTA: "Sentence",
                     },
                     punctuation: {
-                        SL: "Never",
-                        HL: "Never",
+                        SL: "",
+                        HL: "",
+                        oxComma: true,
                     },
                     globalMentions: false,
                 },
@@ -331,6 +310,7 @@ class VersioningTool extends Component {
                     punctuation: {
                         SL: "",
                         HL: "",
+                        oxComma: true,
                     },
                     globalMentions: true,
                 },
@@ -360,6 +340,7 @@ class VersioningTool extends Component {
                     punctuation: {
                         SL: "Always",
                         HL: "fullSentence",
+                        oxComma: true,
                     },
                     globalMentions: true,
                 },
@@ -418,6 +399,7 @@ class VersioningTool extends Component {
                     punctuation: {
                         SL: "",
                         HL: "",
+                        oxComma: true,
                         replaceExPoint: true,
                     },
                     globalMentions: false,
@@ -448,6 +430,7 @@ class VersioningTool extends Component {
                     punctuation: {
                         SL: "Always",
                         HL: "Always",
+                        oxComma: true,
                     },
                     globalMentions: false,
                 }
@@ -459,7 +442,7 @@ class VersioningTool extends Component {
                 bonusCurrency: false,
             },
             activePartner: {},
-            selectedPartners: ["AA", "AK", "CR", "DL", "ES", "FR", "FS", "HH", "ID", "IHG", "MB", "SW", "TB", "UA", "UP"],
+            selectedPartners: ["AA", "AK", "CR", "DL", "FR", "FS", "HH", "ID", "IHG", "MB", "SW", "TB", "UA", "UP"],
         }
     }
 
@@ -547,8 +530,16 @@ class VersioningTool extends Component {
                     // Clone base
                     let body = bodyClone.cloneNode(true);
                     // Set the current activePartner
+                    console.log("PARTNER: "+ thisReact.state.partners[i].name);
                     thisReact.setState({ activePartner: thisReact.state.partners[i] });
-                    for (let key in thisReact.state.mentions) thisReact.state.mentions[key] = false;
+                    const keys = Object.keys(thisReact.state.mentions);
+                    keys.forEach((key, index) => {
+                        console.log("key: "+key, key);
+                        console.log("value: "+thisReact.state.mentions[key], thisReact.state.mentions[key]);
+                        thisReact.state.mentions[key] = false;
+                        console.log("After value: "+thisReact.state.mentions[key], thisReact.state.mentions[key]);
+                        console.log("");
+                    });
 
                     // Version for activePartner
                     thisReact.createPartnerXML(body, thisReact.activePartner);
@@ -665,6 +656,9 @@ class VersioningTool extends Component {
                     (section === "headline" && this.state.activePartner.punctuation.HL === "fullSentence")) {
                     return ".";
                 } else return "";
+            case "oxcomma":
+                if(this.state.activePartner.punctuation.oxComma) return ","
+                else return "";
             default:
                 return "(UNDEFINED VARIABLE)";
         }
@@ -791,9 +785,7 @@ class VersioningTool extends Component {
     determineSection = (textRuns) => {
         for (let j = 0; j < textRuns.length; j++) {
             var text = textRuns[j].childNodes[0].nodeValue.toLowerCase();
-            if (text.includes("subject line (50 characters)") || text.includes("subject line:")) {
-                console.log(text);
-                return "subject";}
+            if (text.includes("subject line (50 characters)") || text.includes("subject line:")) return "subject";
             else if (text.includes("title tag (50 characters)") || text.includes("title tag:")) return "title";
             else if (text.includes("headline:" || text.includes("headline copy:"))) return "headline";
             else if (text.includes("body:") || text.includes("body copy:")) return "body";
