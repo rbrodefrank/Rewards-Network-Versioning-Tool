@@ -48,7 +48,7 @@ class VersioningTool extends Component {
                     partner: "AK",
                     program: "Mileage Plan Dining",
                     currency: "miles",
-                    xNumCurrency: "[3/5] {currency} per $1 spent",
+                    xNumCurrency: "[3/5] {currency} per doller spent",
                     bonusCurrency: "bonus miles",
                     parentBrandIncentive: "for travel on Alaska Airlines and Alaska Global Partners",
                     firstMention: {
@@ -319,7 +319,7 @@ class VersioningTool extends Component {
                     partner: "SW",
                     program: "Rapid Rewards Dining",
                     currency: "points",
-                    xNumCurrency: " three {currency} per dollar spent",
+                    xNumCurrency: "three {currency} per dollar spent",
                     bonusCurrency: "bonus points",
                     parentBrandIncentive: "that can be used towards your next flight",
                     firstMention: {
@@ -365,7 +365,7 @@ class VersioningTool extends Component {
                     casing: {
                         SL: "Sentence",
                         HL: "Sentence",
-                        CTA: "All Caps",
+                        CTA: "Sentence",
                     },
                     punctuation: {
                         SL: "Always",
@@ -408,19 +408,20 @@ class VersioningTool extends Component {
                     name: "Upromise\u00AE",
                     partner: "UP",
                     program: "Upromise Dining",
-                    currency: "cash back for college",
-                    xNumCurrency: "[2.5%/5%] cash back for college per $1 spent",
-                    bonusCurrency: "currency",
+                    currency: "cash back rewards",
+                    xNumCurrency: "[2.5%/5%] cash back rewards",
+                    bonusCurrency: "cash back rewards",
                     parentBrandIncentive: "",
                     firstMention: {
                         program: "Upromise\u00AE Dining",
-                        currency: "cash back for college",
-                        bonusCurrency: "currency",
+                        currency: "cash back rewards",
+                        bonusCurrency: "cash back rewards",
+                        xNumCurrency: "[2.5%/5%] cash back rewards per $1 spent"
                     },
                     SLTT: {
                         program: "Upromise Dining",
-                        currency: "cash back",
-                        bonusCurrency: "currency",
+                        currency: "cash back rewards",
+                        bonusCurrency: "cash back rewards",
                     },
                     casing: {
                         SL: "Sentence",
