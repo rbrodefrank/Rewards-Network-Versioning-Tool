@@ -171,7 +171,7 @@ class VersioningTool extends Component {
                     currency: "miles",
                     xNumCurrency: "[3/5] {currency} per $1 spent",
                     bonusCurrency: "bonus miles",
-                    parentBrandIncentive: "for travel on Spirit Airlines",
+                    parentBrandIncentive: "for travel on Spirit\u00AE",
                     firstMention: {
                         program: "Free Spirit\u00AE Dining",
                         currency: "Free Spirit\u00AE miles",
@@ -289,7 +289,7 @@ class VersioningTool extends Component {
                     partner: "MB",
                     program: "Eat Around Town",
                     currency: "points",
-                    xNumCurrency: "[4/6] {currency} per dollar spent",
+                    xNumCurrency: "{currency}",
                     bonusCurrency: "bonus points",
                     parentBrandIncentive: "",
                     firstMention: {
