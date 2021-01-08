@@ -471,12 +471,10 @@ class VersioningTool extends Component {
         var parser = new DOMParser();
         var reader = new FileReader();
 
-        var docName = docs.files[0].name;
-
         if (!docs.files || docs.files.length === 0) {
             //No File Choosen
             document.getElementsByClassName("text-error")[0].innerHTML = "No files selected";
-        } else if (!docName.includes('.docx')) {
+        } else if (!docs.files[0].name.includes('.docx')) {
             document.getElementsByClassName("text-error")[0].innerHTML = "Document is not of .docx type";
         } else {
             var doc = docs.files[0];
@@ -527,19 +525,21 @@ class VersioningTool extends Component {
                 for (let i = 0; i < thisReact.state.partners.length; i++) {
                     // Check if partner is selected
                     if (!thisReact.state.selectedPartners.includes(thisReact.state.partners[i].partner)) continue;
-
+                    
                     // Clone base
                     let body = bodyClone.cloneNode(true);
-                    // Set the current activePartner
-                    console.log("PARTNER: "+ thisReact.state.partners[i].name);
+                    // // Set the current activePartner
+                    // console.log("PARTNER: "+ thisReact.state.partners[i].name);
+
                     thisReact.setState({ activePartner: thisReact.state.partners[i] });
                     const keys = Object.keys(thisReact.state.mentions);
                     keys.forEach((key, index) => {
-                        console.log("key: "+key, key);
-                        console.log("value: "+thisReact.state.mentions[key], thisReact.state.mentions[key]);
-                        thisReact.state.mentions[key] = false;
-                        console.log("After value: "+thisReact.state.mentions[key], thisReact.state.mentions[key]);
-                        console.log("");
+                        thisReact.state.mentions = {
+                            global: false,
+                            program: false,
+                            currency: false,
+                            bonusCurrency: false,
+                        }
                     });
 
                     // Version for activePartner
@@ -669,7 +669,8 @@ class VersioningTool extends Component {
         if (section === "subject" || section === "title") {
             returnVal = this.state.activePartner.SLTT[word] ? this.state.activePartner.SLTT[word] : this.state.activePartner[word];
         } else if (section === "headline" || section === "body" || section === "cta") {
-            if (this.state.mentions[word]) {
+            console.log(word, this.state.mentions);
+            if (!(word in this.state.mentions) && this.state.mentions[word]) {
                 returnVal = this.state.activePartner[word];
             } else {
                 // Set return value to first mention or if first mention variable doesn't exist set to second mention
