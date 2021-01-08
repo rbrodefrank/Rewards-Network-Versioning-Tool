@@ -669,7 +669,6 @@ class VersioningTool extends Component {
         if (section === "subject" || section === "title") {
             returnVal = this.state.activePartner.SLTT[word] ? this.state.activePartner.SLTT[word] : this.state.activePartner[word];
         } else if (section === "headline" || section === "body" || section === "cta") {
-            console.log(word, this.state.mentions);
             if (!(word in this.state.mentions) && this.state.mentions[word]) {
                 returnVal = this.state.activePartner[word];
             } else {
