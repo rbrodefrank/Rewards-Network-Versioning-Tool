@@ -342,7 +342,7 @@ class VersioningTool extends Component {
                         HL: "fullSentence",
                         oxComma: true,
                     },
-                    globalMentions: true,
+                    globalMentions: false,
                 },
                 {
                     name: "TrueBlue",
