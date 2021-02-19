@@ -81,7 +81,7 @@ class VersioningTool extends Component {
                     currency: "Reward Credits",
                     xNumCurrency: "{currency}",
                     bonusCurrency: "currency",
-                    parentBrandIncentive: "for use at Caesars Entertainment\u00AE locations",
+                    parentBrandIncentive: "for use at Caesars Rewards\u00AE destinations",
                     firstMention: {
                         program: "Caesars Rewards Dining",
                         currency: "Reward Credits\u00AE",
@@ -315,6 +315,37 @@ class VersioningTool extends Component {
                     globalMentions: true,
                 },
                 {
+                    name: "Neighborhood Nosh",
+                    partner: "NN",
+                    program: "Neighborhood Nosh",
+                    currency: "rewards",
+                    xNumCurrency: "rewards",
+                    bonusCurrency: "bonus rewards",
+                    parentBrandIncentive: "",
+                    firstMention: {
+                        program: "Neighborhood Nosh",
+                        currency: "rewards",
+                        bonusCurrency: "bonus rewards",
+                    },
+                    SLTT: {
+                        program: "Neighborhood Nosh",
+                        currency: "rewards",
+                        bonusCurrency: "bonus rewards",
+                    },
+                    casing: {
+                        SL: "Sentence",
+                        HL: "Sentence",
+                        CTA: "All Caps",
+                    },
+                    punctuation: {
+                        SL: "",
+                        HL: "",
+                        oxComma: true,
+                        replaceEllipsis: true,
+                    },
+                    globalMentions: false,
+                },
+                {
                     name: "Rapid Rewards\u00AE",
                     partner: "SW",
                     program: "Rapid Rewards Dining",
@@ -443,7 +474,7 @@ class VersioningTool extends Component {
                 bonusCurrency: false,
             },
             activePartner: {},
-            selectedPartners: ["AA", "AK", "CR", "DL", "FR", "FS", "HH", "ID", "IHG", "MB", "SW", "TB", "UA", "UP"],
+            selectedPartners: ["AA", "AK", "CR", "DL", "FR", "FS", "HH", "IHG", "MB", "NN", "SW", "TB", "UA", "UP"],
         }
     }
 
