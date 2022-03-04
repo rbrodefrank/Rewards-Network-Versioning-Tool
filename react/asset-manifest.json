@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/react/static/css/main.f316d7b9.css",
-    "main.js": "/react/static/js/main.2c463e51.js",
-    "main.js.map": "/react/static/js/main.2c463e51.js.map",
+    "main.js": "/react/static/js/main.e0784954.js",
+    "main.js.map": "/react/static/js/main.e0784954.js.map",
     "index.html": "/react/index.html",
-    "precache-manifest.e007b4820354d48a9c87ffa469879f49.js": "/react/precache-manifest.e007b4820354d48a9c87ffa469879f49.js",
+    "precache-manifest.e4ac7220f8c58df2805db7a8cc9b4264.js": "/react/precache-manifest.e4ac7220f8c58df2805db7a8cc9b4264.js",
     "service-worker.js": "/react/service-worker.js",
     "static/css/main.f316d7b9.css.map": "/react/static/css/main.f316d7b9.css.map",
-    "static/js/main.2c463e51.js.LICENSE.txt": "/react/static/js/main.2c463e51.js.LICENSE.txt"
+    "static/js/main.e0784954.js.LICENSE.txt": "/react/static/js/main.e0784954.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/css/main.f316d7b9.css",
-    "static/js/main.2c463e51.js"
+    "static/js/main.e0784954.js"
   ]
 }
