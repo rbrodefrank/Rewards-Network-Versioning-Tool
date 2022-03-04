@@ -293,9 +293,9 @@ class VersioningTool extends Component {
                     bonusCurrency: "bonus points",
                     parentBrandIncentive: "",
                     firstMention: {
-                        program: "Eat Around Town by Marriott Bonvoy\u2122",
-                        currency: "Marriott Bonvoy\u2122 points",
-                        bonusCurrency: "Marriott Bonvoy\u2122 bonus points",
+                        program: "Eat Around Town by Marriott Bonvoy\u00AE",
+                        currency: "Marriott Bonvoy\u00AE points",
+                        bonusCurrency: "Marriott Bonvoy\u00AE bonus points",
                     },
                     SLTT: {
                         program: "Eat Around Town by Marriott Bonvoy",
