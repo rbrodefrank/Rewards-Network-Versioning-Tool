@@ -791,6 +791,7 @@ class VersioningTool extends Component {
     punctAlways = (str, last) => {
         if (last) {
             str = str.trim();
+            if (str.length <= 2) return str;
             let lastLetter = str[str.length - 1];
             let punctuationArr = ['.', '?', '!', '\u2026'];
             if (punctuationArr.includes(lastLetter)) return str;
