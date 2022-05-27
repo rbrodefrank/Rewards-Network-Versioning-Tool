@@ -75,6 +75,35 @@ class VersioningTool extends Component {
                     globalMentions: true,
                 },
                 {
+                    name: "Choice Privileges\u00AE", // \u00AE = registered trademark
+                    partner: "CP",
+                    program: "Eat & Earn",
+                    currency: "points",
+                    xNumCurrency: "5 {currency} per $1 spent",
+                    bonusCurrency: "bonus points",
+                    parentBrandIncentive: "for rewards like free nights, gift cards and more.",
+                    firstMention: {
+                        program: "Choice Privileges\u00AE Eat & Earn",
+                        currency: "Choice Privileges\u00AE points",
+                        bonusCurrency: "Choice Privileges\u00AE bonus points",
+                    },
+                    SLTT: {
+                        program: "Eat & Earn",
+                        currency: "points",
+                        bonusCurrency: "bonus points",
+                    },
+                    casing: {
+                        SL: "Title",
+                        HL: "Title",
+                        CTA: "Title",
+                    },
+                    punctuation: {
+                        SL: "",
+                        HL: "",
+                    },
+                    globalMentions: true,
+                },
+                {
                     name: "Caesars Rewards",
                     partner: "CR",
                     program: "Caesars Rewards Dining",
