@@ -304,7 +304,7 @@ class VersioningTool extends Component {
                     casing: {
                         SL: "Sentence",
                         HL: "Sentence",
-                        CTA: "Sentence",
+                        CTA: "All Caps",
                     },
                     punctuation: {
                         SL: "",
