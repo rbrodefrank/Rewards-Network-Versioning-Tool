@@ -285,7 +285,7 @@ class VersioningTool extends Component {
                 },
                 {
                     name: "IHG One Rewards",
-                    partner: "IHG\u00AE Hotels & Resorts",
+                    partner: "IHG One Hotels & Resorts",
                     program: "IHG One Rewards Dine & Earn",
                     currency: "points",
                     xNumCurrency: "[5/8] {currency} per $1 spent",
