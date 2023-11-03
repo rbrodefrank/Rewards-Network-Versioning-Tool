@@ -23,8 +23,8 @@ class VersioningTool extends Component {
                     parentBrandIncentive: "for travel on American Airlines",
                     firstMention: {
                         program: "AAdvantage Dining\u2120",
-                        currency: "American Airlines AAdvantage\u00AE miles",
-                        bonusCurrency: "American Airlines AAdvantage\u00AE bonus miles",
+                        currency: "AAdvantage\u00AE miles",
+                        bonusCurrency: "AAdvantage\u00AE bonus miles",
                     },
                     SLTT: {
                         program: "AAdvantage Dining",
@@ -77,7 +77,7 @@ class VersioningTool extends Component {
                 {
                     name: "Choice Privileges\u00AE", // \u00AE = registered trademark
                     partner: "CP",
-                    program: "Eat & Earn",
+                    program: "Choice Privileges Eat & Earn",
                     currency: "points",
                     xNumCurrency: "5 {currency} per $1 spent",
                     bonusCurrency: "bonus points",
@@ -215,6 +215,36 @@ class VersioningTool extends Component {
                         SL: "Title",
                         HL: "Title",
                         CTA: "All Caps",
+                    },
+                    punctuation: {
+                        SL: "",
+                        HL: "",
+                        oxComma: true,
+                    },
+                    globalMentions: false,
+                },
+                {
+                    name: "Groupon+",
+                    partner: "GP",
+                    program: "Groupon+",
+                    currency: "cash back",
+                    xNumCurrency: "5% {currency}",
+                    bonusCurrency: "bonus cash back",
+                    parentBrandIncentive: "",
+                    firstMention: {
+                        program: "Groupon+",
+                        currency: "cash back",
+                        bonusCurrency: "bonus cash back",
+                    },
+                    SLTT: {
+                        program: "Groupon+",
+                        currency: "cash back",
+                        bonusCurrency: "bonus cash back",
+                    },
+                    casing: {
+                        SL: "Sentence",
+                        HL: "Sentence",
+                        CTA: "Title",
                     },
                     punctuation: {
                         SL: "",
@@ -408,8 +438,8 @@ class VersioningTool extends Component {
                     name: "TrueBlue",
                     partner: "TB",
                     program: "TrueBlue Dining",
-                    currency: "points",
-                    xNumCurrency: "3 {currency} for every dollar spent",
+                    currency: "TrueBlue points",
+                    xNumCurrency: "3 {currency} per eligible $1 spent",
                     bonusCurrency: "bonus points",
                     parentBrandIncentive: "for travel on JetBlue",
                     firstMention: {
@@ -503,7 +533,7 @@ class VersioningTool extends Component {
                 bonusCurrency: false,
             },
             activePartner: {},
-            selectedPartners: ["AA", "AK", "CP", "CR", "DL", "FR", "FS", "HH", "IHG", "MB", "NN", "SW", "TB", "UA", "UP"],
+            selectedPartners: ["AA", "AK", "CP", "CR", "DL", "FR", "FS", "GP", "HH", "IHG", "MB", "NN", "SW", "TB", "UA", "UP"],
         }
     }
 
