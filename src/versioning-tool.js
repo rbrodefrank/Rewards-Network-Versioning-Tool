@@ -88,7 +88,7 @@ class VersioningTool extends Component {
                         bonusCurrency: "Choice Privileges\u00AE bonus points",
                     },
                     SLTT: {
-                        program: "Eat & Earn",
+                        program: "Choice Privileges Eat & Earn",
                         currency: "points",
                         bonusCurrency: "bonus points",
                     },
