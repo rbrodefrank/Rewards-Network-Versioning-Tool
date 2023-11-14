@@ -464,6 +464,35 @@ class VersioningTool extends Component {
                     globalMentions: false,
                 },
                 {
+                    name: "T-Mobile",
+                    partner: "TM",
+                    program: "T-Mobile Dining Rewards",
+                    currency: "cash back",
+                    xNumCurrency: "5% {currency}",
+                    bonusCurrency: "bonus cash back",
+                    parentBrandIncentive: "",
+                    firstMention: {
+                        program: "T-Mobile\u00AE Dining Rewards",
+                        currency: "cash back",
+                        bonusCurrency: "bonus cash back",
+                    },
+                    SLTT: {
+                        program: "T-Mobile Dining Rewards",
+                        currency: "cash back",
+                        bonusCurrency: "bonus cash back",
+                    },
+                    casing: {
+                        SL: "Sentence",
+                        HL: "Sentence",
+                        CTA: "Sentence",
+                    },
+                    punctuation: {
+                        SL: "",
+                        HL: "",
+                    },
+                    globalMentions: false,
+                },
+                {
                     name: "MileagePlus\u00AE",
                     partner: "UA",
                     program: "MileagePlus Dining",
@@ -533,7 +562,7 @@ class VersioningTool extends Component {
                 bonusCurrency: false,
             },
             activePartner: {},
-            selectedPartners: ["AA", "AK", "CP", "CR", "DL", "FR", "FS", "GP", "HH", "IHG", "MB", "NN", "SW", "TB", "UA", "UP"],
+            selectedPartners: ["AA", "AK", "CP", "CR", "DL", "FR", "FS", "GP", "HH", "IHG", "MB", "NN", "SW", "TB", "TM", "UA", "UP"],
         }
     }
 
