@@ -104,7 +104,7 @@ class VersioningTool extends Component {
                     globalMentions: true,
                 },
                 {
-                    name: "Caesars Rewards",
+                    name: "Caesars Rewards\u00AE",
                     partner: "CR",
                     program: "Caesars Rewards Dining",
                     currency: "Reward Credits",
@@ -166,7 +166,7 @@ class VersioningTool extends Component {
                 {
                     name: "Fuel Rewards",
                     partner: "FR",
-                    program: "Fuel Rewards Dining",
+                    program: "Fuel Rewards\u00AE Dining",
                     currency: "fuel savings",
                     xNumCurrency: "10¢/gal in {currency} for every $50 spent",
                     bonusCurrency: "Fuel Rewards Dining",
@@ -191,7 +191,7 @@ class VersioningTool extends Component {
                         HL: "",
                         oxComma: true,
                     },
-                    globalMentions: true,
+                    globalMentions: false,
                 },
                 {
                     name: "Free Spirit\u2122",
