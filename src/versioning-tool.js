@@ -464,6 +464,35 @@ class VersioningTool extends Component {
                     globalMentions: false,
                 },
                 {
+                    name: "The Guestbook",
+                    partner: "TGB",
+                    program: "Cash Back Dining",
+                    currency: "cash rewards",
+                    xNumCurrency: "5% {currency}",
+                    bonusCurrency: "bonus cash rewards",
+                    parentBrandIncentive: "toward a future hotel visit.",
+                    firstMention: {
+                        program: "Cash Back Dining by The Guestbook",
+                        currency: "cash rewards",
+                        bonusCurrency: "bonus cash rewards",
+                    },
+                    SLTT: {
+                        program: "Cash Back Dining",
+                        currency: "cash rewards",
+                        bonusCurrency: "bonus cash rewards",
+                    },
+                    casing: {
+                        SL: "Title",
+                        HL: "Title",
+                        CTA: "Sentence",
+                    },
+                    punctuation: {
+                        SL: "",
+                        HL: "",
+                    },
+                    globalMentions: false,
+                },
+                {
                     name: "T-Mobile",
                     partner: "TM",
                     program: "T-Mobile Dining Rewards",
@@ -562,7 +591,7 @@ class VersioningTool extends Component {
                 bonusCurrency: false,
             },
             activePartner: {},
-            selectedPartners: ["AA", "AK", "CP", "CR", "DL", "FR", "FS", "GP", "HH", "IHG", "MB", "NN", "SW", "TB", "TM", "UA", "UP"],
+            selectedPartners: ["AA", "AK", "CP", "CR", "DL", "FR", "FS", "GP", "HH", "IHG", "MB", "NN", "SW", "TB", "TGB", "TM", "UA", "UP"],
         }
     }
 
@@ -705,6 +734,7 @@ class VersioningTool extends Component {
             let skipSectionTitle = false;
             if (newSection) {
                 section = newSection;
+                console.log(section);
                 if (newSection === "subject" || newSection === "headline") {
                     for (let key in this.state.mentions) this.state.mentions[key] = false;
                 }
@@ -730,7 +760,7 @@ class VersioningTool extends Component {
 
                         let replacementWord = this.replaceVariable(word, section);
                         if (replacementWord === "" || replacementWord === ".") replacementVar = " " + replacementVar + "|" + replacementVar;
-
+                        console.log(replacementWord);
                         let regEx = new RegExp(replacementVar);
                         txt = txt.replace(regEx, replacementWord);
                     }
