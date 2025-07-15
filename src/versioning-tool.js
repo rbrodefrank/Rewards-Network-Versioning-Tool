@@ -17,6 +17,7 @@ class VersioningTool extends Component {
                     name: "AAdvantage\u00AE", // Loyalty program name
                     partner: "AA",
                     program: "AAdvantage Dining\u2120",
+                    baseurl:"https://www.aadvantagedining.com",
                     currency: "AAdvantage\u00AE miles",
                     xNumCurrency: "[3/5] {currency} per $1 spent", // AAdvantage\u00AE miles
                     bonusCurrency: "AAdvantage\u00AE bonus miles",
@@ -47,6 +48,7 @@ class VersioningTool extends Component {
                     name: "Mileage Plan\u2122",
                     partner: "AK",
                     program: "Mileage Plan Dining",
+                    baseurl:"https://mileageplan.rewardsnetwork.com",
                     currency: "miles",
                     xNumCurrency: "[3/5] {currency} per dollar spent",
                     bonusCurrency: "bonus miles",
@@ -78,6 +80,7 @@ class VersioningTool extends Component {
                     name: "Choice Privileges\u00AE", // \u00AE = registered trademark
                     partner: "CP",
                     program: "Choice Privileges Eat & Earn",
+                    baseurl:"https://www.choiceprivilegesdining.com",
                     currency: "points",
                     xNumCurrency: "5 {currency} per $1 spent",
                     bonusCurrency: "bonus points",
@@ -107,6 +110,7 @@ class VersioningTool extends Component {
                     name: "Caesars Rewards\u00AE",
                     partner: "CR",
                     program: "Caesars Rewards Dining",
+                    baseurl:"https://www.caesarsrewardsdining.com",
                     currency: "Reward Credits",
                     xNumCurrency: "{currency}",
                     bonusCurrency: "Reward Credits",
@@ -137,6 +141,7 @@ class VersioningTool extends Component {
                     name: "SkyMiles",
                     partner: "DL",
                     program: "SkyMiles Dining",
+                    baseurl:"https://www.skymilesdining.com",
                     currency: "miles",
                     xNumCurrency: "[3/5] {currency} per $1 spent",
                     bonusCurrency: "bonus miles",
@@ -167,6 +172,7 @@ class VersioningTool extends Component {
                     name: "Fuel Rewards",
                     partner: "FR",
                     program: "Fuel Rewards\u00AE Dining",
+                    baseurl:"https://dining.fuelrewards.com",
                     currency: "fuel savings",
                     xNumCurrency: "10¢/gal in {currency} for every $50 spent",
                     bonusCurrency: "Fuel Rewards Dining",
@@ -197,6 +203,7 @@ class VersioningTool extends Component {
                     name: "Free Spirit\u2122",
                     partner: "FS",
                     program: "Free Spirit\u00AE Dining",
+                    baseurl:"https://www.freespiritdining.com",
                     currency: "points",
                     xNumCurrency: "[3/5] {currency} per $1 spent",
                     bonusCurrency: "bonus points",
@@ -227,6 +234,7 @@ class VersioningTool extends Component {
                     name: "Groupon+",
                     partner: "GP",
                     program: "Groupon+",
+                    baseurl:"",
                     currency: "cash back",
                     xNumCurrency: "5% {currency}",
                     bonusCurrency: "bonus cash back",
@@ -257,6 +265,7 @@ class VersioningTool extends Component {
                     name: "Hilton Honors",
                     partner: "HH",
                     program: "Hilton Honors Dining",
+                    baseurl:"https://www.hiltonhonorsdining.com",
                     currency: "Bonus Points",
                     xNumCurrency: "[5/8] {currency} per $1 spent",
                     bonusCurrency: "Bonus Points",
@@ -284,39 +293,10 @@ class VersioningTool extends Component {
                     globalMentions: false,
                 },
                 {
-                    name: "iDine",
-                    partner: "ID",
-                    program: "iDine",
-                    currency: "benefits",
-                    xNumCurrency: "benefits",
-                    bonusCurrency: "bonus benefits",
-                    parentBrandIncentive: "",
-                    firstMention: {
-                        program: "iDine\u00AE",
-                        currency: "benefits",
-                        bonusCurrency: "bonus benefits",
-                    },
-                    SLTT: {
-                        program: "iDine",
-                        currency: "benefits",
-                        bonusCurrency: "bonus benefits",
-                    },
-                    casing: {
-                        SL: "Title",
-                        HL: "Title",
-                        CTA: "Sentence",
-                    },
-                    punctuation: {
-                        SL: "",
-                        HL: "",
-                        oxComma: true,
-                    },
-                    globalMentions: false,
-                },
-                {
                     name: "IHG One Rewards",
                     partner: "IHG",
                     program: "IHG One Rewards Dine & Earn",
+                    baseurl:"https://ihgrewardsdineandearn.rewardsnetwork.com",
                     currency: "points",
                     xNumCurrency: "[5/8] {currency} per $1 spent",
                     bonusCurrency: "bonus points",
@@ -347,6 +327,7 @@ class VersioningTool extends Component {
                     name: "Marriott Bonvoy",
                     partner: "MB",
                     program: "Eat Around Town",
+                    baseurl:"https://eataroundtown.marriott.com",
                     currency: "points",
                     xNumCurrency: "{currency}",
                     bonusCurrency: "bonus points",
@@ -377,6 +358,7 @@ class VersioningTool extends Component {
                     name: "Neighborhood Nosh",
                     partner: "NN",
                     program: "Neighborhood Nosh",
+                    baseurl:"https://neighborhoodnoshrewards.com",
                     currency: "cash back",
                     xNumCurrency: "cash back",
                     bonusCurrency: "bonus cash back",
@@ -408,6 +390,7 @@ class VersioningTool extends Component {
                     name: "Rapid Rewards\u00AE",
                     partner: "SW",
                     program: "Rapid Rewards Dining",
+                    baseurl:"https://www.rapidrewardsdining.com",
                     currency: "points",
                     xNumCurrency: "three {currency} per dollar spent",
                     bonusCurrency: "bonus points",
@@ -438,6 +421,7 @@ class VersioningTool extends Component {
                     name: "TrueBlue",
                     partner: "TB",
                     program: "TrueBlue Dining",
+                    baseurl:"https://truebluedining.com/",
                     currency: "TrueBlue points",
                     xNumCurrency: "3 {currency} per eligible $1 spent",
                     bonusCurrency: "bonus points",
@@ -467,6 +451,7 @@ class VersioningTool extends Component {
                     name: "The Guestbook",
                     partner: "TGB",
                     program: "Cash Back Dining",
+                    baseurl:"https://dining.theguestbook.com",
                     currency: "cash rewards",
                     xNumCurrency: "5% {currency}",
                     bonusCurrency: "bonus cash rewards",
@@ -496,6 +481,7 @@ class VersioningTool extends Component {
                     name: "T-Mobile",
                     partner: "TM",
                     program: "T-Mobile Dining Rewards",
+                    baseurl:"https://www.tmobilediningrewards.com",
                     currency: "cash back",
                     xNumCurrency: "5% {currency}",
                     bonusCurrency: "bonus cash back",
@@ -525,6 +511,7 @@ class VersioningTool extends Component {
                     name: "MileagePlus\u00AE",
                     partner: "UA",
                     program: "MileagePlus Dining",
+                    baseurl:"https://dining.mileageplus.com",
                     currency: "miles",
                     xNumCurrency: "[3/5] {currency} per $1 spent",
                     bonusCurrency: "bonus miles",
@@ -556,6 +543,7 @@ class VersioningTool extends Component {
                     name: "Upromise\u00AE",
                     partner: "UP",
                     program: "Upromise Dining",
+                    baseurl:"https://dining.upromise.com",
                     currency: "cash back rewards",
                     xNumCurrency: "[2.5%/5%] cash back rewards",
                     bonusCurrency: "cash back rewards",
@@ -806,6 +794,9 @@ class VersioningTool extends Component {
                     (section === "headline" && this.state.activePartner.punctuation.HL === "fullSentence")) {
                     return ".";
                 } else return "";
+            case "partnerurl":
+                word="baseurl"
+                break;
             case "oxcomma":
                 if(this.state.activePartner.punctuation.oxComma) return ","
                 else return "";
