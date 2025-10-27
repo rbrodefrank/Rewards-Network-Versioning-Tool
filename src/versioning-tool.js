@@ -570,7 +570,37 @@ class VersioningTool extends Component {
                         oxComma: true,
                     },
                     globalMentions: false,
-                }
+                },
+                {
+                    name: "Wyndham Rewards\u00AE",
+                    partner: "WR",
+                    program: "Dine Out with Wyndham Rewards\u2120",
+                    baseurl:"https://dining.mileageplus.com",
+                    currency: "points",
+                    xNumCurrency: "5 {currency} per $1 spent",
+                    bonusCurrency: "bonus points",
+                    parentBrandIncentive: "for hotel stays, gift cards, and more.",
+                    firstMention: {
+                        program: "Dine Out with Wyndham Rewards\u2120",
+                        currency: "Wyndham Rewards points ",
+                        bonusCurrency: "Wyndham Rewards bonus points",
+                    },
+                    SLTT: {
+                        program: "Dine Out with Wyndham Rewards",
+                        currency: "points ",
+                        bonusCurrency: "bonus points",
+                    },
+                    casing: {
+                        SL: "Title",
+                        HL: "Title",
+                        CTA: "All Caps",
+                    },
+                    punctuation: {
+                        SL: "",
+                        HL: "",
+                    },
+                    globalMentions: false,
+                },
             ],
             mentions: {
                 global: false,
@@ -579,7 +609,7 @@ class VersioningTool extends Component {
                 bonusCurrency: false,
             },
             activePartner: {},
-            selectedPartners: ["AA", "AK", "CP", "CR", "DL", "FR", "FS", "GP", "HH", "IHG", "MB", "NN", "SW", "TB", "TGB", "TM", "UA", "UP"],
+            selectedPartners: ["AA", "AK", "CP", "CR", "DL", "FR", "FS", "GP", "HH", "IHG", "MB", "NN", "SW", "TB", "TGB", "TM", "UA", "UP", "WR"],
         }
     }
 
