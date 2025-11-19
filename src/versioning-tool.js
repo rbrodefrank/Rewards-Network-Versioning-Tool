@@ -282,11 +282,11 @@ class VersioningTool extends Component {
                     },
                     casing: {
                         SL: "Title",
-                        HL: "Lowercase",
-                        CTA: "Lowercase",
+                        HL: "Sentence",
+                        CTA: "Sentence",
                     },
                     punctuation: {
-                        SL: "",
+                        SL: "Always",
                         HL: "",
                         oxComma: true,
                     },
