@@ -24,7 +24,7 @@ class VersioningTool extends Component {
                     parentBrandIncentive: "for travel on American Airlines",
                     firstMention: {
                         program: "AAdvantage Dining\u2120",
-                        currency: "AAdvantage\u00AE miles",
+                        currency: "AAdvantage\u00AE miles and Loyalty Points",
                         bonusCurrency: "AAdvantage\u00AE bonus miles",
                     },
                     SLTT: {
@@ -116,7 +116,7 @@ class VersioningTool extends Component {
                     bonusCurrency: "Reward Credits",
                     parentBrandIncentive: "for use at Caesars Rewards\u00AE destinations",
                     firstMention: {
-                        program: "Caesars Rewards Dining",
+                        program: "Caesars Rewards\u00AE Dining\u00AE",
                         currency: "Reward Credits\u00AE",
                         bonusCurrency: "currency",
                     },
@@ -147,7 +147,7 @@ class VersioningTool extends Component {
                     bonusCurrency: "bonus miles",
                     parentBrandIncentive: "for travel on Delta Air Lines",
                     firstMention: {
-                        program: "SkyMiles\u00AE Dining",
+                        program: "SkyMiles Dining",
                         currency: "miles",
                         bonusCurrency: "bonus miles",
                     },
@@ -281,7 +281,7 @@ class VersioningTool extends Component {
                         bonusCurrency: "Bonus Points",
                     },
                     casing: {
-                        SL: "Title",
+                        SL: "Sentence",
                         HL: "Sentence",
                         CTA: "Sentence",
                     },
